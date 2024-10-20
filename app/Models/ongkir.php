@@ -46,7 +46,7 @@ class Ongkir extends Model
         return $response;
     }
 
-    public static function calculateShippingCost($fromCityId)
+    public static function hargaongkir($origin,$destination,$weight,$courier)
     {
         $apiKey = env('RAJAONGKIR_API_KEY');
 
@@ -54,10 +54,10 @@ class Ongkir extends Model
             $response = Http::withHeaders([
                 'key' => $apiKey,
             ])->post('https://api.rajaongkir.com/starter/cost', [
-                'origin' => $fromCityId,
-                'destination' => '7',
-                'weight' => 30,
-                'courier' => 'jne', // contoh kurir
+                'origin' => $origin,
+                'destination' => $destination,
+                'weight' => $weight,
+                'courier' => $courier, 
             ]);
 
             if ($response->successful()) {

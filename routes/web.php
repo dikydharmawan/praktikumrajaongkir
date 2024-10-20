@@ -10,4 +10,4 @@ Route::get('/provinsi', [OngkirController::class,'listProvinsi']);
 Route::get('/provinsi/{id}', [OngkirController::class,'getProvinsi']);
 Route::get('/kota', [OngkirController::class,'listCity']);
 Route::get('/kota/{id}', [OngkirController::class,'getCity']);
-Route::get('/calculate-shipping/{fromCityId}', [OngkirController::class, 'calculateShippingCost']);
+Route::get('/hargaongkir/{origin}/{destination}/{weight}/{courier}', [OngkirController::class, 'hargaongkir']);

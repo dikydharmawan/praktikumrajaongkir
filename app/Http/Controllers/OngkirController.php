@@ -27,8 +27,8 @@ class OngkirController extends Controller
     return $result;
    }
 
-   public function calculateShippingCost($fromCityId){
-       $result = Ongkir::calculateShippingCost($fromCityId);
+   public function hargaongkir($origin,$destination,$weight,$courier){
+       $result = Ongkir::hargaongkir($origin,$destination,$weight,$courier);
        return $result;
    }
 
