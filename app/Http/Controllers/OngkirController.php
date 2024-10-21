@@ -27,8 +27,8 @@ class OngkirController extends Controller
     return $result;
    }
 
-   public function hargaongkir($origin,$destination,$weight,$courier){
-       $result = Ongkir::hargaongkir($origin,$destination,$weight,$courier);
+   public function getcost($origin,$destination,$weight,$courier){
+       $result = Ongkir::getcost($origin,$destination,$weight,$courier);
        return $result;
    }
 

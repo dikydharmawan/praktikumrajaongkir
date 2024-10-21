@@ -46,7 +46,7 @@ class Ongkir extends Model
         return $response;
     }
 
-    public static function hargaongkir($origin,$destination,$weight,$courier)
+    public static function getcost($origin,$destination,$weight,$courier)
     {
         $apiKey = env('RAJAONGKIR_API_KEY');
 
